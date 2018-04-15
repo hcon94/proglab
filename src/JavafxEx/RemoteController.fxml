@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RemoteConController">
-   <top>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can control the speed" BorderPane.alignment="CENTER" />
-   </top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RemoteConController">
    <bottom>
       <GridPane prefHeight="231.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -24,8 +22,11 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Slider fx:id="speedslider" prefHeight="34.0" prefWidth="289.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Slider id="sliderSpeed" fx:id="speedslider" min="10.0" prefHeight="34.0" prefWidth="289.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </bottom>
+   <center>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can control the max speed in pecentage" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>
